@@ -28,6 +28,16 @@ const nextConfig = {
       },
     ]
   },
+  async redirects() {
+    return [
+      {
+        source: '/curriculum',
+        destination:
+          'https://drive.google.com/file/d/1fUxVlw7cFmAvoGs2q6veWWq5LBynWidE/view?usp=sharing',
+        permanent: false,
+      },
+    ]
+  },
 }
 
 export default nextConfig

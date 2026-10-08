@@ -20,9 +20,13 @@ export const siteConfig = {
     posterSrc: "/images/showreel-poster.png",
   },
   contact: {
-    email: "",
-    socialLinks: [] as ReadonlyArray<{ label: string; href: string }>,
+    email: "gonzalonicolas98@hotmail.com",
+    socialLinks: [
+      { label: "Instagram", href: "https://www.instagram.com/gonzarmendia" },
+    ] as ReadonlyArray<{ label: string; href: string }>,
   },
+  curriculumUrl:
+    "https://drive.google.com/file/d/1fUxVlw7cFmAvoGs2q6veWWq5LBynWidE/view?usp=sharing",
   placeholders: {
     works: "Selected work will appear here. Add your project details when ready.",
     contact:
@@ -40,7 +44,8 @@ export const siteUrlPaths = {
   works: "/works",
   contact: "/contact",
   about: "/about",
-  curriculum: "/curriculum",
+  curriculum:
+    "https://drive.google.com/file/d/1fUxVlw7cFmAvoGs2q6veWWq5LBynWidE/view?usp=sharing",
 } as const;
 
 export type PortfolioPath =

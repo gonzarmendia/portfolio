@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { siteConfig } from "@/config/site";
@@ -27,21 +26,15 @@ export function AboutPage() {
             transition={transition(0.15)}
           >
             <Image
-              src="/images/showreel-poster.png"
-              alt="Portrait placeholder — replace with Gonzalo Arzamendia's portrait"
+              src="/images/portrait.jpg"
+              alt="Portrait of Gonzalo Arzamendia"
               fill
               priority
               sizes="(max-width: 800px) 100vw, 56vw"
               className="about-page__portrait-image"
             />
-            <div className="about-page__portrait-placeholder">
-              <span>PORTRAIT / 001</span>
-            </div>
           </motion.div>
           <p className="about-page__caption">THE PERSON BEHIND THE FRAME</p>
-          <Link className="about-page__curriculum" href="/curriculum">
-            CURRICULUM <ArrowUpRight aria-hidden="true" />
-          </Link>
         </div>
 
         <div className="about-page__intro">
@@ -51,9 +44,24 @@ export function AboutPage() {
           <motion.h1 className="about-page__title" initial={reduceMotion ? false : { opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={transition(0.4)}>
             Images that move
           </motion.h1>
-          <motion.p className="about-page__name" initial={reduceMotion ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={transition(0.55)}>
-            {siteConfig.personal.firstName} {siteConfig.personal.lastName}
-          </motion.p>
+          <motion.div
+            className="about-page__name-row"
+            initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={transition(0.55)}
+          >
+            <p className="about-page__name">
+              {siteConfig.personal.firstName} {siteConfig.personal.lastName}
+            </p>
+            <a
+              className="about-page__curriculum"
+              href={siteConfig.curriculumUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              CURRICULUM <ArrowUpRight aria-hidden="true" />
+            </a>
+          </motion.div>
           <motion.div className="about-page__bio" initial={reduceMotion ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={transition(0.65)}>
             <p>I&apos;m a filmmaker and visual storyteller driven by a simple belief: every image has the power to make someone feel something.</p>
             <p>Through filmmaking, editing, and creative direction, I seek to make pictures that create a strong emotional link between audience and art.</p>

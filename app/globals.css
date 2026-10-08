@@ -1134,20 +1134,25 @@ a {
 .about-page__hero { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr); gap: clamp(42px, 8vw, 136px); max-width: 1440px; margin: 0 auto; padding: clamp(36px, 5vw, 76px) clamp(24px, 7vw, 112px) clamp(100px, 13vw, 190px); }
 .about-page__portrait-wrap { position: relative; }
 .about-page__portrait { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: #c8c8c1; }
-.about-page__portrait-image { object-fit: cover; filter: grayscale(1) contrast(1.08); opacity: .72; }
+.about-page__portrait-image { object-fit: cover; filter: grayscale(1) contrast(1.08); }
 .about-page__portrait-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(18px, 2.5vw, 32px); color: #fff; font-family: var(--font-mono), monospace; font-size: .66rem; letter-spacing: .15em; text-transform: uppercase; }
 .about-page__portrait-placeholder small { align-self: flex-end; font-size: .6rem; letter-spacing: .1em; }
 .about-page__caption, .about-page__meta, .about-page__eyebrow, .about-page__statement-mark { font-family: var(--font-mono), monospace; font-size: .64rem; letter-spacing: .12em; text-transform: uppercase; }
 .about-page__caption { margin: 14px 0 0; color: #70706c; }
-.about-page__curriculum, .about-page__closing-link { display: inline-flex; align-items: center; gap: 8px; color: inherit; font-family: var(--font-mono), monospace; font-size: .68rem; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
-.about-page__curriculum { margin-top: 25px; }
-.about-page__curriculum::after, .about-page__closing-link::after { content: ""; width: 100%; height: 1px; background: currentColor; transform: translateY(5px) scaleX(.45); transform-origin: left; transition: transform 220ms ease; }
-.about-page__curriculum:hover::after, .about-page__closing-link:hover::after { transform: translateY(5px) scaleX(1); }
-.about-page__curriculum svg, .about-page__closing-link svg { width: 14px; height: 14px; }
+.about-page__closing-link { display: inline-flex; align-items: center; gap: 8px; color: inherit; font-family: var(--font-mono), monospace; font-size: .68rem; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
+.about-page__closing-link::after { content: ""; width: 100%; height: 1px; background: currentColor; transform: translateY(5px) scaleX(.45); transform-origin: left; transition: transform 220ms ease; }
+.about-page__closing-link:hover::after { transform: translateY(5px) scaleX(1); }
+.about-page__closing-link svg { width: 14px; height: 14px; }
 .about-page__intro { align-self: center; max-width: 570px; }
 .about-page__eyebrow { margin: 0 0 clamp(30px, 5vw, 70px); color: #6f6f6a; }
 .about-page__title { margin: 0; font-size: clamp(4rem, 8.5vw, 9.5rem); font-weight: 500; letter-spacing: -.07em; line-height: .82; }
-.about-page__name { margin: clamp(28px, 4vw, 52px) 0 0; font-size: clamp(1.2rem, 2vw, 1.8rem); letter-spacing: -.02em; }
+.about-page__name-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: clamp(14px, 2vw, 24px); margin: clamp(28px, 4vw, 52px) 0 0; }
+.about-page__name { margin: 0; font-size: clamp(1.2rem, 2vw, 1.8rem); letter-spacing: -.02em; }
+.about-page__curriculum { position: relative; display: inline-flex; align-items: center; gap: 6px; color: inherit; font-family: var(--font-mono), monospace; font-size: clamp(0.95rem, 1.5vw, 1.35rem); font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+.about-page__curriculum::after { content: ""; position: absolute; right: 0; bottom: -3px; left: 0; height: 2px; background: currentColor; transform: scaleX(.35); transform-origin: left; transition: transform 220ms ease; }
+.about-page__curriculum:hover::after { transform: scaleX(1); }
+.about-page__curriculum svg { width: 0.82em; height: 0.82em; stroke-width: 2.25; transition: transform 220ms ease; }
+.about-page__curriculum:hover svg { transform: translate(2px, -2px); }
 .about-page__bio { max-width: 420px; margin-top: 24px; color: #5f5f5a; font-size: 1rem; line-height: 1.6; }
 .about-page__bio p { margin: 0 0 14px; }
 .about-page__meta { display: block; margin-top: 54px; color: #8b8b84; }
@@ -1203,6 +1208,9 @@ a {
   .contact-page__field input::placeholder, .contact-page__field textarea::placeholder { color: #9a9a94; }
   .contact-page__field input:focus, .contact-page__field select:focus, .contact-page__field textarea:focus { border-color: #171717; }
   .contact-page__form-message { margin: -5px 0 0; color: #73736d; font-size: .8rem; line-height: 1.5; }
+  .contact-page__form-message--error { color: #b91c1c; }
+  .contact-page__form-message--success { color: #15803d; }
+  .contact-page__form-message-link { color: inherit; text-decoration: underline; margin-left: 4px; }
   .contact-page__submit { display: inline-flex; align-items: center; justify-content: space-between; width: 100%; margin-top: 4px; padding: 17px 0; border: 0; border-top: 1px solid #171717; border-bottom: 1px solid #171717; background: transparent; color: #171717; cursor: pointer; font-family: var(--font-mono), monospace; font-size: .68rem; letter-spacing: .12em; text-align: left; transition: padding 220ms ease, background 220ms ease; }
   .contact-page__submit:hover, .contact-page__submit:focus-visible { padding-inline: 14px; background: #171717; color: #f1f1ed; }
   .contact-page__submit svg { width: 16px; height: 16px; }
@@ -1213,5 +1221,5 @@ a {
   .contact-page__back-link svg { width: 14px; height: 14px; transition: transform 220ms ease; }
   .contact-page__back-link:hover svg { transform: translate(3px, -3px); }
   @media (max-width: 760px) { .contact-shell > .site-header { flex-direction: column; gap: 24px; padding: 27px 23px; } .contact-shell > .site-header .site-navigation { justify-content: flex-start; gap: 18px; } .contact-page__hero { grid-template-columns: 1fr; gap: 64px; padding-top: 34px; padding-bottom: 108px; } .contact-page__title { font-size: clamp(3.7rem, 17vw, 7rem); } .contact-page__hero-copy { max-width: 300px; } .contact-page__workspace { grid-template-columns: 1fr; gap: 72px; padding-top: 58px; } .contact-page__intro { margin-bottom: 52px; } .contact-page__closing h2 { font-size: clamp(3.8rem, 17vw, 7rem); } }
-  @media (prefers-reduced-motion: reduce) { .contact-page__email::after, .contact-page__submit, .contact-page__back-link svg { transition: none; } }
+  @media (prefers-reduced-motion: reduce) { .contact-page__email::after, .contact-page__submit, .contact-page__back-link svg, .about-page__curriculum::after, .about-page__curriculum svg { transition: none; } }
 @media (max-width: 760px) { .about-shell > .site-header { flex-direction: column; gap: 24px; padding: 27px 23px; } .about-shell > .site-header .site-navigation { justify-content: flex-start; gap: 18px; } .about-page__hero { grid-template-columns: 1fr; gap: 58px; padding-top: 20px; } .about-page__portrait { aspect-ratio: 5 / 6; } .about-page__intro { padding: 0 2px; } .about-page__title { font-size: clamp(3.8rem, 18vw, 6.8rem); } .about-page__statement h2 { font-size: clamp(2.8rem, 12vw, 5rem); } .about-page__closing h2 { font-size: clamp(3.2rem, 14vw, 5.5rem); } }
