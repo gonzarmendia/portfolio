@@ -1,19 +1,41 @@
 import type { Metadata } from "next";
-import { placeholderPages } from "@/config/site";
-import { PortfolioPlaceholderPage } from "@/components/portfolio-placeholder-page";
+import { SiteHeader } from "@/components/layout/site-header";
+import { WorksGrid } from "@/components/works/works-grid";
+import { worksItems } from "@/config/works";
 
 export const metadata: Metadata = {
   title: "Works",
+  description: "Selected projects and collaborations.",
 };
 
 export default function WorksPage() {
-  const page = placeholderPages.works;
-
   return (
-    <PortfolioPlaceholderPage
-      currentPath={page.path}
-      title={page.title}
-      message={page.message}
-    />
+    <div className="works-shell">
+      <SiteHeader currentPath="/works" />
+      <main className="works-page">
+        <section className="works-page__hero" aria-labelledby="works-title">
+          <div>
+            <p className="works-page__eyebrow">SELECTED WORKS / 2024—2025</p>
+            <h1 id="works-title" className="works-page__title">
+              Images
+              <span>that move.</span>
+            </h1>
+          </div>
+          <div className="works-page__hero-copy">
+            <span className="works-page__index">03 — 03</span>
+            <p>Films, images, and visual stories shaped through direction, movement, and atmosphere.</p>
+            <span className="works-page__arrow" aria-hidden="true">↓</span>
+          </div>
+        </section>
+
+        <section className="works-page__projects" aria-labelledby="projects-title">
+          <div className="works-page__section-label">
+            <p id="projects-title">SELECTED PROJECTS</p>
+            <span>SCROLL TO EXPLORE</span>
+          </div>
+          <WorksGrid items={worksItems} />
+        </section>
+      </main>
+    </div>
   );
 }

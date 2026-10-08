@@ -1,7 +1,7 @@
 export const siteConfig = {
   personal: {
-    firstName: "FIRST NAME",
-    lastName: "LAST NAME",
+    firstName: "Gonzalo",
+    lastName: "Arzamendia",
     subtitle: "FILM | MARKETING",
   },
   description:
@@ -40,6 +40,7 @@ export const siteUrlPaths = {
   works: "/works",
   contact: "/contact",
   about: "/about",
+  curriculum: "/curriculum",
 } as const;
 
 export type PortfolioPath =

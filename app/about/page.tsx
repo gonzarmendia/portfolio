@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
-import { placeholderPages } from "@/config/site";
-import { PortfolioPlaceholderPage } from "@/components/portfolio-placeholder-page";
+import { AboutPage } from "@/components/about/about-page";
+import { SiteHeader } from "@/components/layout/site-header";
 
 export const metadata: Metadata = {
   title: "About",
 };
 
-export default function AboutPage() {
-  const page = placeholderPages.about;
-
+export default function AboutRoute() {
   return (
-    <PortfolioPlaceholderPage
-      currentPath={page.path}
-      title={page.title}
-      message={page.message}
-    />
+    <div className="about-shell">
+      <SiteHeader currentPath="/about" />
+      <AboutPage />
+    </div>
   );
 }
