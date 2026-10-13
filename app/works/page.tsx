@@ -32,6 +32,11 @@ export default function WorksPage() {
           </div>
         </section>
 
+        {/* ── Category Nav (Filmmaking / Marketing) ── */}
+        <div className="works-page__nav-wrap">
+          <WorksSectionNav />
+        </div>
+
         {/* ── Scrolling image grid (existing) ── */}
         <section className="works-page__projects" aria-labelledby="projects-title">
           <div className="works-page__section-label">
@@ -40,11 +45,6 @@ export default function WorksPage() {
           </div>
           <WorksGrid items={worksItems} />
         </section>
-
-        {/* ── Category Nav (Filmmaking / Marketing) ── */}
-        <div className="works-page__nav-wrap">
-          <WorksSectionNav />
-        </div>
 
         {/* ── Filmmaking Section ── */}
         <FilmmakingSection projects={filmmakingProjects} />
