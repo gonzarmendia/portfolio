@@ -27,7 +27,7 @@ export default function WorksPage() {
           </div>
           <div className="works-page__hero-copy">
             <span className="works-page__index">03 — 03</span>
-            <p>Films, images, and visual stories shaped through direction, movement, and atmosphere.</p>
+            <p>Films shaped by emotions, directions and movements told through the visual language.</p>
             <span className="works-page__arrow" aria-hidden="true">↓</span>
           </div>
         </section>
