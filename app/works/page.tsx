@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/layout/site-header";
 import { WorksGrid } from "@/components/works/works-grid";
-import { worksItems } from "@/config/works";
+import { WorksSectionNav } from "@/components/works/works-section-nav";
+import { FilmmakingSection } from "@/components/works/filmmaking-section";
+import { MarketingSection } from "@/components/works/marketing-section";
+import { worksItems, filmmakingProjects, marketingSections } from "@/config/works";
 
 export const metadata: Metadata = {
   title: "Works",
-  description: "Selected projects and collaborations.",
+  description: "Selected projects and collaborations in filmmaking and marketing.",
 };
 
 export default function WorksPage() {
@@ -13,6 +16,7 @@ export default function WorksPage() {
     <div className="works-shell">
       <SiteHeader currentPath="/works" />
       <main className="works-page">
+        {/* ── Hero ── */}
         <section className="works-page__hero" aria-labelledby="works-title">
           <div>
             <p className="works-page__eyebrow">SELECTED WORKS / 2024—2025</p>
@@ -28,6 +32,12 @@ export default function WorksPage() {
           </div>
         </section>
 
+        {/* ── Category Nav (Filmmaking / Marketing) ── */}
+        <div className="works-page__nav-wrap">
+          <WorksSectionNav />
+        </div>
+
+        {/* ── Scrolling image grid (existing) ── */}
         <section className="works-page__projects" aria-labelledby="projects-title">
           <div className="works-page__section-label">
             <p id="projects-title">SELECTED PROJECTS</p>
@@ -35,6 +45,12 @@ export default function WorksPage() {
           </div>
           <WorksGrid items={worksItems} />
         </section>
+
+        {/* ── Filmmaking Section ── */}
+        <FilmmakingSection projects={filmmakingProjects} />
+
+        {/* ── Marketing Section ── */}
+        <MarketingSection sections={marketingSections} />
       </main>
     </div>
   );
