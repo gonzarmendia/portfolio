@@ -73,21 +73,21 @@ export interface ProjectDetails {
 
 export const filmmakingProjects: FilmmakingProject[] = [
   {
-    id: "open-country",
-    title: "Open Country",
-    subtitle: "Documentary Short",
-    category: "Documentary Short",
-    duration: "08:14",
-    year: "2024",
-    role: "Director & Cinematographer",
-    client: "Self-directed",
-    description:
-      "A visual journey exploring untamed landscapes and the stories of those who call them home. Shot across three continents with an emphasis on natural light and cinematic storytelling.",
-    thumbnail: "/images/works-open-country.png",
-    videoSrc: "", // e.g. "/videos/open-country.mp4"
-    videoUrl: "https://vimeo.com",
-    href: "/works/open-country",
-  },
+  id: "open-country",
+  title: "The Muse",
+  subtitle: "Short Film",
+  category: "Short Film",
+  duration: "08:14",
+  year: "2026",
+  role: "Cinematographer",
+  client: "Self-directed",
+  description:
+    "A visual narrative exploring the story of two lost siblings. Separated by chance, reunited by a divine guidance. The film follows a woman and a priest, who reuinte after the passing of their mother. The woman seeks answers from the priest, but the priest has very little answers to give.",
+  thumbnail: "/images/works-open-country.png",
+  videoSrc: "",
+  videoUrl: "https://youtu.be/g7RqR60Sirk",
+  href: "/works/open-country",
+},
   {
     id: "low-tide",
     title: "Low Tide",

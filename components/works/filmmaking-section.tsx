@@ -38,31 +38,43 @@ export function FilmmakingSection({ projects }: FilmmakingSectionProps) {
             {/* Video / Thumbnail area */}
             <div className="film-card__media">
               {project.videoUrl ? (
-                <a
-                  href={project.videoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="film-card__play-link"
-                  aria-label={`Watch ${project.title}`}
-                >
+                project.videoUrl.includes('youtu') ? (
                   <div className="film-card__thumb-wrap">
-                    <div className="film-card__thumb-placeholder">
-                      <span className="film-card__category">
-                        {project.category}
-                      </span>
-                    </div>
-                    <div className="film-card__play-btn" aria-hidden="true">
-                      <svg
-                        width="28"
-                        height="28"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
+                    <iframe
+                      src={`https://www.youtube.com/embed/${project.videoUrl.split('/').pop()}`}
+                      title={project.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="film-card__video-embed"
+                    />
                   </div>
-                </a>
+                ) : (
+                  <a
+                    href={project.videoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="film-card__play-link"
+                    aria-label={`Watch ${project.title}`}
+                  >
+                    <div className="film-card__thumb-wrap">
+                      <div className="film-card__thumb-placeholder">
+                        <span className="film-card__category">
+                          {project.category}
+                        </span>
+                      </div>
+                      <div className="film-card__play-btn" aria-hidden="true">
+                        <svg
+                          width="28"
+                          height="28"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                )
               ) : (
                 <div className="film-card__thumb-wrap">
                   <div className="film-card__thumb-placeholder">
