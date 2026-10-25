@@ -57,6 +57,7 @@ export function FilmmakingSection({ projects }: FilmmakingSectionProps) {
                     aria-label={`Watch ${project.title}`}
                   >
                     <div className="film-card__thumb-wrap">
+                      <img src={project.thumbnail} alt={project.title} className="film-card__thumb-img" />
                       <div className="film-card__thumb-placeholder">
                         <span className="film-card__category">
                           {project.category}
@@ -77,6 +78,7 @@ export function FilmmakingSection({ projects }: FilmmakingSectionProps) {
                 )
               ) : (
                 <div className="film-card__thumb-wrap">
+                  <img src={project.thumbnail} alt={project.title} className="film-card__thumb-img" />
                   <div className="film-card__thumb-placeholder">
                     <span className="film-card__category">
                       {project.category}

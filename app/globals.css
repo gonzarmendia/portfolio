@@ -1361,6 +1361,14 @@ a {
   border-radius: 2px;
 }
 
+.film-card__thumb-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .film-card__thumb-placeholder {
   position: absolute;
   inset: 0;
