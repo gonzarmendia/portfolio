@@ -90,18 +90,18 @@ export const filmmakingProjects: FilmmakingProject[] = [
 },
   {
     id: "low-tide",
-    title: "Low Tide",
-    subtitle: "Cinematic Music Video",
-    category: "Music Video",
+    title: "Your Only Chance",
+    subtitle: "Short Film",
+    category: "Short Film",
     duration: "03:45",
-    year: "2024",
-    role: "Director & Editor",
+    year: "2025",
+    role: "Director, Editor & Writer",
     client: "Independent Artist",
     description:
-      "A moody, contemplative piece shot in natural coastal light with minimal cuts. Explores themes of solitude and reflection through water, light, and movement.",
+      "A moody, contemplative piece set inside the protagonist's mind. This short film explores the concepts of family and memories when one is faced with death.",
     thumbnail: "/images/works-low-tide.png",
     videoSrc: "", // e.g. "/videos/low-tide.mp4"
-    videoUrl: "https://youtube.com",
+    videoUrl: "https://youtu.be/oGnP4y7zSEU",
     href: "/works/low-tide",
   },
   {
@@ -276,10 +276,10 @@ export const worksItems: WorksItem[] = [
   },
   {
     id: "low-tide",
-    title: "Low Tide",
-    subtitle: "Music Video",
+    title: "Your Only Chance",
+    subtitle: "Short Film",
     description:
-      "A moody, contemplative piece shot entirely in single-takes with minimal editing. Explores themes of solitude and reflection through water, light, and movement.",
+      "A moody, contemplative piece set inside the protagonist's mind. This short film explores the concepts of family and memories when one is faced with death.",
     thumbnail: "/images/works-low-tide.png",
     href: "/works/low-tide",
   },
@@ -331,23 +331,22 @@ export const projectsDetails: Record<string, ProjectDetails> = {
   },
   "low-tide": {
     id: "low-tide",
-    title: "Low Tide",
-    subtitle: "Music Video",
+    title: "Your Only Chance",
+    subtitle: "Short Film",
     client: "Independent Artist",
-    year: "2023",
+    year: "2025",
     timeline: "2 months",
     thumbnail: "/images/works-low-tide.png",
     heroImage: "/images/works-low-tide.png",
     description:
-      "A moody, contemplative piece shot entirely in single-takes with minimal editing.",
+      "A moody, contemplative piece set inside the protagonist's mind. This short film explores the concepts of family and memories when one is faced with death.",
     fullDescription:
-      "Low Tide explores themes of solitude and reflection through water, light, and movement. Shot in a single location over multiple sessions, the video uses the natural changes of tide and light to create narrative progression without traditional cuts. The approach challenges conventional music video storytelling and prioritizes mood and atmosphere over narrative clarity.",
-    role: "Director, Cinematographer, Editor",
+      "A moody, contemplative piece set inside the protagonist's mind. This short film explores the concepts of family and memories when one is faced with death.",
+    role: "Director, Editor & Writer",
     results: "400K+ Spotify streams, featured on music blogs",
     tools: ["Canon R5", "Adobe Premiere Pro", "DaVinci Resolve"],
     links: [
-      { label: "Watch on YouTube", href: "#", target: "_blank" },
-      { label: "Listen on Spotify", href: "#", target: "_blank" },
+      { label: "Watch on YouTube", href: "https://youtu.be/oGnP4y7zSEU", target: "_blank" },
     ],
   },
   "echoes-of-dawn": {

@@ -7,6 +7,13 @@ interface FilmmakingSectionProps {
   projects: FilmmakingProject[];
 }
 
+function getYouTubeEmbedUrl(url: string) {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  const videoId = match && match[2].length === 11 ? match[2] : url.split("/").pop()?.split("?")[0];
+  return `https://www.youtube.com/embed/${videoId}`;
+}
+
 export function FilmmakingSection({ projects }: FilmmakingSectionProps) {
   return (
     <section
@@ -41,7 +48,7 @@ export function FilmmakingSection({ projects }: FilmmakingSectionProps) {
                 project.videoUrl.includes('youtu') ? (
                   <div className="film-card__thumb-wrap">
                     <iframe
-                      src={`https://www.youtube.com/embed/${project.videoUrl.split('/').pop()}`}
+                      src={getYouTubeEmbedUrl(project.videoUrl)}
                       title={project.title}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
