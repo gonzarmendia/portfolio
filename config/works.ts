@@ -77,7 +77,7 @@ export const filmmakingProjects: FilmmakingProject[] = [
   title: "The Muse",
   subtitle: "Short Film",
   category: "Short Film",
-  duration: "08:14",
+  duration: "18:01",
   year: "2026",
   role: "Cinematographer",
   client: "Self-directed",
