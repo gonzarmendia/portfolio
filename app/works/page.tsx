@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/layout/site-header";
-import { WorksGrid } from "@/components/works/works-grid";
+
 import { WorksSectionNav } from "@/components/works/works-section-nav";
 import { FilmmakingSection } from "@/components/works/filmmaking-section";
 import { MarketingSection } from "@/components/works/marketing-section";
-import { worksItems, filmmakingProjects, marketingSections } from "@/config/works";
+import { filmmakingProjects, marketingSections } from "@/config/works";
 
 export const metadata: Metadata = {
   title: "Works",
@@ -37,14 +37,8 @@ export default function WorksPage() {
           <WorksSectionNav />
         </div>
 
-        {/* ── Scrolling image grid (existing) ── */}
-        <section className="works-page__projects" aria-labelledby="projects-title">
-          <div className="works-page__section-label">
-            <p id="projects-title">SELECTED PROJECTS</p>
-            <span>SCROLL TO EXPLORE</span>
-          </div>
-          <WorksGrid items={worksItems} />
-        </section>
+
+
 
         {/* ── Filmmaking Section ── */}
         <FilmmakingSection projects={filmmakingProjects} />
