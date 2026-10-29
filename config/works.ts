@@ -13,6 +13,7 @@ export interface FilmmakingProject {
   year: string;
   role: string;
   client?: string;
+  director?: string;
   description: string;
   thumbnail: string;
   /** Add your compressed MP4 file in /public/videos/ and specify the path here (e.g., "/videos/open-country.mp4") */
@@ -75,12 +76,12 @@ export const filmmakingProjects: FilmmakingProject[] = [
   {
   id: "open-country",
   title: "The Muse",
-  subtitle: "Short Film",
+  subtitle: "Short Film — Directed by Samuel Walker",
   category: "Short Film",
   duration: "18:01",
   year: "2026",
   role: "Cinematographer",
-  client: "Self-directed",
+  director: "Samuel Walker",
   description:
     "A visual narrative exploring the story of two lost siblings. Separated by chance, reunited by a divine guidance. The film follows a woman and a priest, who reuinte after the passing of their mother. The woman seeks answers from the priest, but the priest has very little answers to give.",
   thumbnail: "/images/works-open-country.png",
