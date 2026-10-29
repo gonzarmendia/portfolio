@@ -92,11 +92,12 @@ export const filmmakingProjects: FilmmakingProject[] = [
   {
     id: "low-tide",
     title: "Your Only Chance",
-    subtitle: "Short Film",
+    subtitle: "Short Film — Directed by Gonzalo Arzamendia",
     category: "Short Film",
     duration: "03:45",
     year: "2025",
     role: "Director, Editor & Writer",
+    director: "Gonzalo Arzamendia",
     client: "Independent Artist",
     description:
       "A moody, contemplative piece set inside the protagonist's mind. This short film explores the concepts of family and memories when one is faced with death.",
@@ -278,7 +279,7 @@ export const worksItems: WorksItem[] = [
   {
     id: "low-tide",
     title: "Your Only Chance",
-    subtitle: "Short Film",
+    subtitle: "Short Film — Directed by Gonzalo Arzamendia",
     description:
       "A moody, contemplative piece set inside the protagonist's mind. This short film explores the concepts of family and memories when one is faced with death.",
     thumbnail: "/images/works-low-tide.png",
