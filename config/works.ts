@@ -140,6 +140,40 @@ export const filmmakingProjects: FilmmakingProject[] = [
     videoUrl: "https://youtu.be/3JU3ZEKUR-4",
     href: "/works/still-form",
   },
+  {
+    id: "film-05",
+    title: "Film Title 05",
+    subtitle: "Short Film — Directed by [Director Name]",
+    category: "Short Film",
+    duration: "00:00",
+    year: "2026",
+    role: "Cinematographer",
+    director: "Director Name",
+    client: "Independent Production",
+    description:
+      "Synopsis and narrative description for this short film. Replace with your story, themes, or concept.",
+    thumbnail: "/images/works-campaign.jpg",
+    videoSrc: "",
+    videoUrl: "",
+    href: "/works/film-05",
+  },
+  {
+    id: "film-06",
+    title: "Film Title 06",
+    subtitle: "Short Film — Directed by Gonzalo Arzamendia",
+    category: "Short Film",
+    duration: "00:00",
+    year: "2026",
+    role: "Director & Cinematographer",
+    director: "Gonzalo Arzamendia",
+    client: "Independent Production",
+    description:
+      "Synopsis and narrative description for this short film. Replace with your story, themes, or concept.",
+    thumbnail: "/images/works-digital.jpg",
+    videoSrc: "",
+    videoUrl: "",
+    href: "/works/film-06",
+  },
 ];
 
 // =============================================================================
@@ -478,5 +512,41 @@ export const projectsDetails: Record<string, ProjectDetails> = {
     results: "12+ Partner Brands Successfully Integrated",
     tools: ["Figma", "Notion", "Adobe After Effects"],
     links: [{ label: "Playbook Preview", href: "#", target: "_blank" }],
+  },
+  "film-05": {
+    id: "film-05",
+    title: "Film Title 05",
+    subtitle: "Short Film — Directed by [Director Name]",
+    client: "Independent Production",
+    year: "2026",
+    timeline: "2 months",
+    thumbnail: "/images/works-campaign.jpg",
+    heroImage: "/images/works-campaign.jpg",
+    description:
+      "Synopsis and narrative description for this short film. Replace with your story, themes, or concept.",
+    fullDescription:
+      "A deeper exploration of the project, technical details, creative vision, and production notes.",
+    role: "Cinematographer",
+    results: "Festival & Showcase Submissions",
+    tools: ["DaVinci Resolve", "Cinema Camera"],
+    links: [{ label: "Watch Film", href: "#", target: "_blank" }],
+  },
+  "film-06": {
+    id: "film-06",
+    title: "Film Title 06",
+    subtitle: "Short Film — Directed by Gonzalo Arzamendia",
+    client: "Independent Production",
+    year: "2026",
+    timeline: "2 months",
+    thumbnail: "/images/works-digital.jpg",
+    heroImage: "/images/works-digital.jpg",
+    description:
+      "Synopsis and narrative description for this short film. Replace with your story, themes, or concept.",
+    fullDescription:
+      "A deeper exploration of the project, technical details, creative vision, and production notes.",
+    role: "Director & Cinematographer",
+    results: "Festival & Showcase Submissions",
+    tools: ["DaVinci Resolve", "Cinema Camera"],
+    links: [{ label: "Watch Film", href: "#", target: "_blank" }],
   },
 };
