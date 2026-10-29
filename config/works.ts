@@ -108,18 +108,19 @@ export const filmmakingProjects: FilmmakingProject[] = [
   },
   {
     id: "echoes-of-dawn",
-    title: "Echoes of Dawn",
-    subtitle: "Narrative Short Film",
-    category: "Narrative Short",
+    title: "Saltwater Sonata",
+    subtitle: "Short Film — Directed by Samuel Walker",
+    category: "Short Film",
     duration: "11:20",
     year: "2025",
-    role: "Director & Cinematographer",
+    role: "Camera Operator & Cinematographer",
+    director: "Samuel Walker",
     client: "Independent Production",
     description:
-      "An atmospheric 35mm visual story exploring memories, distance, and dawn light along rugged coastal shores. Rich analog texture and quiet cinematic pacing.",
+      "After losing his lover, a man desperately chases her in an unobtainable melody.",
     thumbnail: "/images/works-echoes.jpg",
     videoSrc: "", // e.g. "/videos/echoes-of-dawn.mp4"
-    videoUrl: "https://vimeo.com",
+    videoUrl: "https://youtu.be/xXBOHXck8es",
     href: "/works/echoes-of-dawn",
   },
   {
@@ -353,21 +354,21 @@ export const projectsDetails: Record<string, ProjectDetails> = {
   },
   "echoes-of-dawn": {
     id: "echoes-of-dawn",
-    title: "Echoes of Dawn",
-    subtitle: "Narrative Short Film",
+    title: "Saltwater Sonata",
+    subtitle: "Short Film — Directed by Samuel Walker",
     client: "Independent Production",
     year: "2025",
     timeline: "3 months",
     thumbnail: "/images/works-echoes.jpg",
     heroImage: "/images/works-echoes.jpg",
     description:
-      "An atmospheric 35mm visual story exploring memories, distance, and dawn light along rugged coastal shores.",
+      "After losing his lover, a man desperately chases her in an unobtainable melody.",
     fullDescription:
-      "Echoes of Dawn is an intimate film capturing the solitude of dawn along wind-swept cliffs. Using vintage 35mm cinema glass and an organic, unhurried editing cadence, the film immerses viewers in natural ambiences, textures of the ocean breeze, and unspoken connection.",
-    role: "Writer, Director, Cinematographer",
+      "Saltwater Sonata is an intimate visual narrative exploring grief, memory, and longing. After losing his lover, a man desperately chases her in an unobtainable melody, captured through evocative framing and rich analog textures.",
+    role: "Camera Operator & Cinematographer",
     results: "Official Selection 2025 Film Showcase",
     tools: ["ARRI Alexa Mini", "Cooke Speed Panchro Lenses", "DaVinci Resolve Studio"],
-    links: [{ label: "Watch Trailer", href: "#", target: "_blank" }],
+    links: [{ label: "Watch on YouTube", href: "https://youtu.be/xXBOHXck8es", target: "_blank" }],
   },
   "arch-materials-campaign": {
     id: "arch-materials-campaign",
